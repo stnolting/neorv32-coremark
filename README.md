@@ -1,2 +1,3 @@
-# neorv32-coremark
-NEORV32 port of CoreMark®
+# CoreMark® on NEORV32
+
+:warning: work in progress :warning:
