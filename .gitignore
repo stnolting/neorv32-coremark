@@ -1,0 +1,9 @@
+build/
+*.elf
+*.bin
+*.coe
+*.mem
+*.mif
+*.vhd
+*.asm
+
