@@ -1,0 +1,6 @@
+[submodule "coremark"]
+	path = coremark
+	url = https://github.com/eembc/coremark.git
+[submodule "neorv32"]
+	path = neorv32
+	url = https://github.com/stnolting/neorv32.git
