@@ -1,7 +1,7 @@
 # NEORV32 Coremark
 
 # CPU ISA / extensions
-MARCH = rv32imcb_zicsr_zifencei_zicond
+MARCH = rv32imc_zicsr_zifencei
 
 # Ooptimization
 EFFORT = -O3

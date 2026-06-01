@@ -20,7 +20,7 @@ Use the [Makefile](makefile) to customize the compilation of coremark for a spec
 
 ```makefile
 # CPU ISA / extensions
-MARCH = rv32imcb_zicsr_zifencei_zicond
+MARCH = rv32imc_zicsr_zifence
 ```
 
 ```makefile
@@ -44,9 +44,6 @@ set the `MULTITHREAD=2` in the Makefile:
 USER_FLAGS += -DMULTITHREAD=2
 ```
 
-> [!TIP]
-> Enable the caches for the dual-core variant to improve memory latency.
-
 Compile the executable (`elf` for JTAG upload, `exe` for UART upload; requires RISC-V GCC).
 See the NEORV32 [data sheet](https://stnolting.github.io/neorv32) for more information about
 the available executable image formats.
@@ -56,6 +53,9 @@ neorv32-coremark$ make clean elf exe
 ```
 
 ## Results
+
+Configuration: NEORV32 v1.13.1.3, `rv32imc_zicsr_zifencei` CPU, fast mul & shift options enabled,
+I$ & D$ enabled, bursts enabled, 64kB IMEM, 64kB DMEM, xPack RISC-V GCC 15.2, `O3` optimization.
 
 ### Single-Core
 
