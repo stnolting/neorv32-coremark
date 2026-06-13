@@ -123,6 +123,9 @@ int default_num_contexts = (int)(MULTITHREAD);
  */
 void portable_init(core_portable *p, int *argc, char *argv[]) {
 
+  (void)argc; // unused
+  (void)argv; // unused
+
   neorv32_rte_setup(); // capture all trap and give debug information, no HW flow control
   neorv32_cpu_csr_write(CSR_MIE, 0); // no interrupts
 
@@ -182,7 +185,7 @@ void *portable_malloc(size_t size) {
   void *pnt;
   pnt = malloc(size);
 
-  if (pnt <= 0) {
+  if (pnt == NULL) {
     neorv32_uart0_printf("Malloc failed!\n");
     asm volatile ("ebreak");
     while(1);
