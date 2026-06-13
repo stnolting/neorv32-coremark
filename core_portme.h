@@ -75,12 +75,18 @@ Original Author: Shay Gal-on
 #ifdef __GNUC__
 #define COMPILER_VERSION "GCC"__VERSION__
 #else
-#define COMPILER_VERSION "Please put compiler version here (e.g. gcc 4.1)"
+#define COMPILER_VERSION "Please put compiler version here"
 #endif
 #endif
+
 #ifndef COMPILER_FLAGS
+#ifndef CC_FLAGS_STR
 #define COMPILER_FLAGS "See Makefile config"
+#else
+#define COMPILER_FLAGS CC_FLAGS_STR
 #endif
+#endif
+
 #ifndef MEM_LOCATION
 #define MEM_LOCATION "STATIC"
 #endif

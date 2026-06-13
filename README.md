@@ -55,7 +55,7 @@ neorv32-coremark$ make clean elf exe
 ## Results
 
 Configuration: NEORV32 v1.13.1.3, `rv32imc_zicsr_zifencei` CPU, fast mul & shift options enabled,
-I$ & D$ enabled, bursts enabled, 64kB IMEM, 64kB DMEM, xPack RISC-V GCC 15.2, `O3` optimization.
+I$ & D$ enabled, bursts enabled, 64kB IMEM, 64kB DMEM.
 
 ### Single-Core
 
@@ -72,7 +72,7 @@ Total time (secs): 21.000000
 Iterations/Sec   : 95.238095
 Iterations       : 2000
 Compiler version : GCC15.2.0
-Compiler flags   : See Makefile config
+Compiler flags   : -march=rv32imc_zicsr_zifencei -mabi=ilp32 -O3 -Wall -Wextra -ffunction-sections -fdata-sections -mno-fdiv -mstrict-align -mbranch-cost=10 -ffp-contract=off -g -Wl,--defsym,__neorv32_rom_size=64k -Wl,--defsym,__neorv32_rom_base=0x00000000 -Wl,--defsym,__neorv32_ram_size=64k -Wl,--defsym,__neorv32_ram_base=0x80000000 -Wl,--defsym,__neorv32_heap_size=32k -DMULTITHREAD=1
 Memory location  : STATIC
 seedcrc          : 0xe9f5
 [0]crclist       : 0xe714
@@ -80,7 +80,7 @@ seedcrc          : 0xe9f5
 [0]crcstate      : 0x8e3a
 [0]crcfinal      : 0x4983
 Correct operation validated. See README.md for run and reporting rules.
-CoreMark 1.0 : 95.238095 / GCC15.2.0 See Makefile config / STATIC
+CoreMark 1.0 : 95.238095 / GCC15.2.0 -march=rv32imc_zicsr_zifencei -mabi=ilp32 -O3 -Wall -Wextra -ffunction-sections -fdata-sections -mno-fdiv -mstrict-align -mbranch-cost=10 -ffp-contract=off -g -Wl,--defsym,__neorv32_rom_size=64k -Wl,--defsym,__neorv32_rom_base=0x00000000 -Wl,--defsym,__neorv32_ram_size=64k -Wl,--defsym,__neorv32_ram_base=0x80000000 -Wl,--defsym,__neorv32_heap_size=32k -DMULTITHREAD=1 / STATIC
 
 Execution completed.
 ```
@@ -100,7 +100,7 @@ Total time (secs): 21.000000
 Iterations/Sec   : 190.476190
 Iterations       : 4000
 Compiler version : GCC15.2.0
-Compiler flags   : See Makefile config
+Compiler flags   : -march=rv32imc_zicsr_zifencei -mabi=ilp32 -O3 -Wall -Wextra -ffunction-sections -fdata-sections -mno-fdiv -mstrict-align -mbranch-cost=10 -ffp-contract=off -g -Wl,--defsym,__neorv32_rom_size=64k -Wl,--defsym,__neorv32_rom_base=0x00000000 -Wl,--defsym,__neorv32_ram_size=64k -Wl,--defsym,__neorv32_ram_base=0x80000000 -Wl,--defsym,__neorv32_heap_size=32k -DMULTITHREAD=2
 Parallel Proprietary : 2
 Memory location  : STATIC
 seedcrc          : 0xe9f5
@@ -113,7 +113,7 @@ seedcrc          : 0xe9f5
 [0]crcfinal      : 0x4983
 [1]crcfinal      : 0x4983
 Correct operation validated. See README.md for run and reporting rules.
-CoreMark 1.0 : 190.476190 / GCC15.2.0 See Makefile config / STATIC / 2:SMP-dual-core
+CoreMark 1.0 : 190.476190 / GCC15.2.0 -march=rv32imc_zicsr_zifencei -mabi=ilp32 -O3 -Wall -Wextra -ffunction-sections -fdata-sections -mno-fdiv -mstrict-align -mbranch-cost=10 -ffp-contract=off -g -Wl,--defsym,__neorv32_rom_size=64k -Wl,--defsym,__neorv32_rom_base=0x00000000 -Wl,--defsym,__neorv32_ram_size=64k -Wl,--defsym,__neorv32_ram_base=0x80000000 -Wl,--defsym,__neorv32_heap_size=32k -DMULTITHREAD=2 / STATIC / 2:SMP-dual-core
 
 Execution completed.
 ```
