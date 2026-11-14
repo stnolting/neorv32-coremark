@@ -1,3 +1,6 @@
+> [!Important]
+> **The NEORV32 CoreMark port been integrated into the main [NEORV32 repository](https://github.com/stnolting/neorv32/pull/1691).**
+
 # CoreMark® on NEORV32
 
 [![License](https://img.shields.io/github/license/stnolting/neorv32-coremark?longCache=true&style=flat-square&label=License)](https://github.com/stnolting/neorv32-coremark/blob/main/LICENSE)
